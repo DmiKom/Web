@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>For the love of Dogs</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <style>
+            #image{
+                margin:20px;
+            }
+
+
+        </style>
+        <script type = "text/javascript">
+            window.onload = function() {
+                var image=document.getElementById("image");
+                var Images=["Images/Little/2.jpg","Images/Little/3.jpeg","Images/Little/4.jpg","Images/Little/5.jpg","Images/Little/6.jpg","Images/Little/7.jpg","Images/Little/8.jpg"];
+                var index=0;
+                function slide() {
+                    image.src = Images[index++%Images.length];
+                }
+                setInterval(slide, 2000);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h2>JavaScript</h2>
+            <div id="menu">
+                <div class="menu"><a href="index.html">Home</a></div>
+                <div class="menu"><a href="About.html">About Me</a></div>
+                <div class="menu"><a href="BigDog.html">Big Dogs</a></div>
+                <div class="menu"><a href="littleDog.html">Little Dogs</a></div>
+                <div class="menu"><a href="Leter.html">News Letter</a></div>
+                <div class="menu"><a href="TTT.html">Tick Tack Toe</a></div>
+            </div>
+            <div id="main">
+        <img id="image" src="Images/Little/1.gif">
+            </div>
+        </div>
+    </body>
+</html>

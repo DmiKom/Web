@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>For the love of Dogs</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <style>
+            input{
+                width: 40px;
+                height: 40px;
+            }
+            
+
+        </style>
+        <script type = "text/javascript">    
+            var cell;
+            var symbol = "X";
+            
+        function ttt(cell)
+    {
+        if (cell.value == " ") {
+            cell.value = symbol;
+            if (symbol == "X")
+                symbol = "O";
+            else
+                symbol = "X";
+        }
+        if (win(cell.value)) {
+            alert(cell.value + " Wins!");
+            return;
+        } else if (!win(cell.value)) {} else {
+            alert("Draw!");
+        }
+    }
+    function win(symbol)
+        {
+        if(document.tt.R0.value==symbol && document.tt.R1.value==symbol && document.tt.R2.value==symbol)
+        return true;
+        else if(document.tt.R3.value==symbol && document.tt.R4.value==symbol && document.tt.R5.value==symbol)
+        return true;
+        else if(document.tt.R6.value==symbol && document.tt.R7.value==symbol && document.tt.R8.value==symbol)
+        return true;
+        else if(document.tt.R0.value==symbol && document.tt.R3.value==symbol && document.tt.R6.value==symbol)
+        return true;
+        else if(document.tt.R1.value==symbol && document.tt.R4.value==symbol && document.tt.R7.value==symbol)
+        return true;
+        else if(document.tt.R2.value==symbol && document.tt.R5.value==symbol && document.tt.R8.value==symbol)
+        return true;
+        else if(document.tt.R0.value==symbol && document.tt.R4.value==symbol && document.tt.R8.value==symbol)
+        return true;
+        else if(document.tt.R2.value==symbol && document.tt.R4.value==symbol && document.tt.R6.value==symbol)
+        return true;
+        else
+        return false;
+        }
+
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="menu">
+                <div class="menu"><a href="index.html">Home</a></div>
+                <div class="menu"><a href="About.html">About Me</a></div>
+                <div class="menu"><a href="BigDog.html">Big Dogs</a></div>
+                <div class="menu"><a href="littleDog.html">Little Dogs</a></div>
+                <div class="menu"><a href="Leter.html">News Letter</a></div>
+                <div class="menu"><a href="TTT.html">Tick Tack Toe</a></div>
+            </div>
+            <div id="main">
+            <FORM  name= "tt">
+                <table >
+                    <tr>
+                        <td><input  type="button" name="R0" value=" " onclick="ttt(this)"/></td>
+                        <td><input  type="button" name="R1" value=" " onclick="ttt(this)"/></td>
+                        <td><input  type="button" name="R2" value=" " onclick="ttt(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td><input  type="button" name="R3" value=" " onclick="ttt(this)"></td>
+                        <td><input  type="button" name="R4" value=" " onclick="ttt(this)"/></td>
+                        <td><input  type="button" name="R5" value=" " onclick="ttt(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td><input  type="button" name="R6" value=" " onclick="ttt(this)"/></td>
+                        <td><input  type="button" name="R7" value=" " onclick="ttt(this)"/></td>
+                        <td><input  type="button" name="R8" value=" " onclick="ttt(this)"/></td>
+                    </tr>
+                </table>
+            </FORM>
+            </div>
+        </div>
+    </body>
+</html>
